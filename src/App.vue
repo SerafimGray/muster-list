@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer
+    <!--<v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
       :clipped="clipped"
@@ -43,11 +43,11 @@
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>menu</v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-toolbar>-->
     <v-content>
       <router-view/>
     </v-content>
-    <v-navigation-drawer
+    <!--<v-navigation-drawer
       temporary
       :right="right"
       v-model="rightDrawer"
@@ -65,7 +65,7 @@
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
-    </v-footer>
+    </v-footer>-->
   </v-app>
 </template>
 
