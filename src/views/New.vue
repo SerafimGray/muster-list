@@ -59,7 +59,6 @@
 </style>
 
 <script>
-  import axios from 'axios'
 
   export default {
     data: () => ({
@@ -72,14 +71,14 @@
     }),
 
     methods: {
-      submit () {
+      async submit () {
         if (this.$refs.form.validate()) {
-          // Native form submission is not yet supported
-          axios.post('/api/submit', {
+          const task = {
             name: this.name,
-            email: this.email,
-            select: this.select,
-          })
+            limit: this.limit
+          }
+          const result = await this.$store.dispatch('addTask', task);
+          this.$router.push('/');
         }
       },
       clear () {
